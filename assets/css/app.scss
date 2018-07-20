@@ -1,6 +1,6 @@
 @import "@material/button/mdc-button";
 
-$primary: red;
+$primary: orange;
 
 .button-primary {
     @include mdc-button-ink-color($primary);
