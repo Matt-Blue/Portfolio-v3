@@ -540,7 +540,13 @@ module.exports = __webpack_require__.p + "bundle.css";
 
 var _ripple = __webpack_require__(6);
 
-var ripple = new _ripple.MDCRipple(document.querySelector('.button-primary'));
+var _index = __webpack_require__(13);
+
+var primaryButtonRipple = new _ripple.MDCRipple(document.querySelector('.button-primary'));
+var secondaryButtonRipple = new _ripple.MDCRipple(document.querySelector('.button-secondary'));
+
+var topAppBarElement = document.querySelector('.mdc-top-app-bar');
+var topAppBar = new _index.MDCTopAppBar(topAppBarElement);
 
 /***/ }),
 /* 6 */
@@ -1837,6 +1843,1103 @@ var numbers = {
 exports.cssClasses = cssClasses;
 exports.strings = strings;
 exports.numbers = numbers;
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+/**
+ * @license
+ * Copyright 2018 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/* eslint no-unused-vars: [2, {"args": "none"}] */
+
+/**
+ * Adapter for MDC Top App Bar
+ *
+ * Defines the shape of the adapter expected by the foundation. Implement this
+ * adapter to integrate the Top App Bar into your framework. See
+ * https://github.com/material-components/material-components-web/blob/master/docs/authoring-components.md
+ * for more information.
+ *
+ * @record
+ */
+var MDCTopAppBarAdapter = function () {
+  function MDCTopAppBarAdapter() {
+    _classCallCheck(this, MDCTopAppBarAdapter);
+  }
+
+  _createClass(MDCTopAppBarAdapter, [{
+    key: "addClass",
+
+    /**
+     * Adds a class to the root Element.
+     * @param {string} className
+     */
+    value: function addClass(className) {}
+
+    /**
+     * Removes a class from the root Element.
+     * @param {string} className
+     */
+
+  }, {
+    key: "removeClass",
+    value: function removeClass(className) {}
+
+    /**
+     * Returns true if the root Element contains the given class.
+     * @param {string} className
+     * @return {boolean}
+     */
+
+  }, {
+    key: "hasClass",
+    value: function hasClass(className) {}
+
+    /**
+     * Sets the specified inline style property on the root Element to the given value.
+     * @param {string} property
+     * @param {string} value
+     */
+
+  }, {
+    key: "setStyle",
+    value: function setStyle(property, value) {}
+
+    /**
+     * Gets the height of the top app bar.
+     * @return {number}
+     */
+
+  }, {
+    key: "getTopAppBarHeight",
+    value: function getTopAppBarHeight() {}
+
+    /**
+     * Registers an event handler on the navigation icon element for a given event.
+     * @param {string} type
+     * @param {function(!Event): undefined} handler
+     */
+
+  }, {
+    key: "registerNavigationIconInteractionHandler",
+    value: function registerNavigationIconInteractionHandler(type, handler) {}
+
+    /**
+     * Deregisters an event handler on the navigation icon element for a given event.
+     * @param {string} type
+     * @param {function(!Event): undefined} handler
+     */
+
+  }, {
+    key: "deregisterNavigationIconInteractionHandler",
+    value: function deregisterNavigationIconInteractionHandler(type, handler) {}
+
+    /**
+     * Emits an event when the navigation icon is clicked.
+     */
+
+  }, {
+    key: "notifyNavigationIconClicked",
+    value: function notifyNavigationIconClicked() {}
+
+    /** @param {function(!Event)} handler */
+
+  }, {
+    key: "registerScrollHandler",
+    value: function registerScrollHandler(handler) {}
+
+    /** @param {function(!Event)} handler */
+
+  }, {
+    key: "deregisterScrollHandler",
+    value: function deregisterScrollHandler(handler) {}
+
+    /** @param {function(!Event)} handler */
+
+  }, {
+    key: "registerResizeHandler",
+    value: function registerResizeHandler(handler) {}
+
+    /** @param {function(!Event)} handler */
+
+  }, {
+    key: "deregisterResizeHandler",
+    value: function deregisterResizeHandler(handler) {}
+
+    /** @return {number} */
+
+  }, {
+    key: "getViewportScrollY",
+    value: function getViewportScrollY() {}
+
+    /** @return {number} */
+
+  }, {
+    key: "getTotalActionItems",
+    value: function getTotalActionItems() {}
+  }]);
+
+  return MDCTopAppBarAdapter;
+}();
+
+exports.default = MDCTopAppBarAdapter;
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * @license
+ * Copyright 2018 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/** @enum {string} */
+var cssClasses = {
+  FIXED_CLASS: 'mdc-top-app-bar--fixed',
+  FIXED_SCROLLED_CLASS: 'mdc-top-app-bar--fixed-scrolled',
+  SHORT_CLASS: 'mdc-top-app-bar--short',
+  SHORT_HAS_ACTION_ITEM_CLASS: 'mdc-top-app-bar--short-has-action-item',
+  SHORT_COLLAPSED_CLASS: 'mdc-top-app-bar--short-collapsed'
+};
+
+/** @enum {number} */
+var numbers = {
+  DEBOUNCE_THROTTLE_RESIZE_TIME_MS: 100,
+  MAX_TOP_APP_BAR_HEIGHT: 128
+};
+
+/** @enum {string} */
+var strings = {
+  ACTION_ITEM_SELECTOR: '.mdc-top-app-bar__action-item',
+  NAVIGATION_EVENT: 'MDCTopAppBar:nav',
+  NAVIGATION_ICON_SELECTOR: '.mdc-top-app-bar__navigation-icon',
+  ROOT_SELECTOR: '.mdc-top-app-bar',
+  TITLE_SELECTOR: '.mdc-top-app-bar__title'
+};
+
+exports.strings = strings;
+exports.cssClasses = cssClasses;
+exports.numbers = numbers;
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _constants = __webpack_require__(11);
+
+var _adapter = __webpack_require__(10);
+
+var _adapter2 = _interopRequireDefault(_adapter);
+
+var _foundation = __webpack_require__(0);
+
+var _foundation2 = _interopRequireDefault(_foundation);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @license
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Copyright 2018 Google Inc. All Rights Reserved.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Licensed under the Apache License, Version 2.0 (the "License");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * you may not use this file except in compliance with the License.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * You may obtain a copy of the License at
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *      http://www.apache.org/licenses/LICENSE-2.0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Unless required by applicable law or agreed to in writing, software
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * distributed under the License is distributed on an "AS IS" BASIS,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * See the License for the specific language governing permissions and
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * limitations under the License.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+/**
+ * @extends {MDCFoundation<!MDCTopAppBarAdapter>}
+ */
+var MDCTopAppBarBaseFoundation = function (_MDCFoundation) {
+  _inherits(MDCTopAppBarBaseFoundation, _MDCFoundation);
+
+  _createClass(MDCTopAppBarBaseFoundation, null, [{
+    key: 'strings',
+
+    /** @return enum {string} */
+    get: function get() {
+      return _constants.strings;
+    }
+
+    /** @return enum {string} */
+
+  }, {
+    key: 'cssClasses',
+    get: function get() {
+      return _constants.cssClasses;
+    }
+
+    /** @return enum {number} */
+
+  }, {
+    key: 'numbers',
+    get: function get() {
+      return _constants.numbers;
+    }
+
+    /**
+     * {@see MDCTopAppBarAdapter} for typing information on parameters and return
+     * types.
+     * @return {!MDCTopAppBarAdapter}
+     */
+
+  }, {
+    key: 'defaultAdapter',
+    get: function get() {
+      return (/** @type {!MDCTopAppBarAdapter} */{
+          hasClass: function hasClass() /* className: string */{},
+          addClass: function addClass() /* className: string */{},
+          removeClass: function removeClass() /* className: string */{},
+          setStyle: function setStyle() /* property: string, value: string */{},
+          getTopAppBarHeight: function getTopAppBarHeight() {},
+          registerNavigationIconInteractionHandler: function registerNavigationIconInteractionHandler() /* type: string, handler: EventListener */{},
+          deregisterNavigationIconInteractionHandler: function deregisterNavigationIconInteractionHandler() /* type: string, handler: EventListener */{},
+          notifyNavigationIconClicked: function notifyNavigationIconClicked() {},
+          registerScrollHandler: function registerScrollHandler() /* handler: EventListener */{},
+          deregisterScrollHandler: function deregisterScrollHandler() /* handler: EventListener */{},
+          registerResizeHandler: function registerResizeHandler() /* handler: EventListener */{},
+          deregisterResizeHandler: function deregisterResizeHandler() /* handler: EventListener */{},
+          getViewportScrollY: function getViewportScrollY() {
+            return (/* number */0
+            );
+          },
+          getTotalActionItems: function getTotalActionItems() {
+            return (/* number */0
+            );
+          }
+        }
+      );
+    }
+
+    /**
+     * @param {!MDCTopAppBarAdapter} adapter
+     */
+
+  }]);
+
+  function MDCTopAppBarBaseFoundation( /** @type {!MDCTopAppBarAdapter} */adapter) {
+    _classCallCheck(this, MDCTopAppBarBaseFoundation);
+
+    var _this = _possibleConstructorReturn(this, (MDCTopAppBarBaseFoundation.__proto__ || Object.getPrototypeOf(MDCTopAppBarBaseFoundation)).call(this, Object.assign(MDCTopAppBarBaseFoundation.defaultAdapter, adapter)));
+
+    _this.navClickHandler_ = function () {
+      return _this.adapter_.notifyNavigationIconClicked();
+    };
+    return _this;
+  }
+
+  _createClass(MDCTopAppBarBaseFoundation, [{
+    key: 'init',
+    value: function init() {
+      this.adapter_.registerNavigationIconInteractionHandler('click', this.navClickHandler_);
+    }
+  }, {
+    key: 'destroy',
+    value: function destroy() {
+      this.adapter_.deregisterNavigationIconInteractionHandler('click', this.navClickHandler_);
+    }
+  }]);
+
+  return MDCTopAppBarBaseFoundation;
+}(_foundation2.default);
+
+exports.default = MDCTopAppBarBaseFoundation;
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.MDCShortTopAppBarFoundation = exports.MDCFixedTopAppBarFoundation = exports.MDCTopAppBarFoundation = exports.MDCTopAppBarBaseFoundation = exports.MDCTopAppBar = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+var _adapter = __webpack_require__(10);
+
+var _adapter2 = _interopRequireDefault(_adapter);
+
+var _component = __webpack_require__(7);
+
+var _component2 = _interopRequireDefault(_component);
+
+var _index = __webpack_require__(6);
+
+var _constants = __webpack_require__(11);
+
+var _foundation = __webpack_require__(12);
+
+var _foundation2 = _interopRequireDefault(_foundation);
+
+var _foundation3 = __webpack_require__(14);
+
+var _foundation4 = _interopRequireDefault(_foundation3);
+
+var _foundation5 = __webpack_require__(15);
+
+var _foundation6 = _interopRequireDefault(_foundation5);
+
+var _foundation7 = __webpack_require__(16);
+
+var _foundation8 = _interopRequireDefault(_foundation7);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @license
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Copyright 2018 Google Inc. All Rights Reserved.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Licensed under the Apache License, Version 2.0 (the "License");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * you may not use this file except in compliance with the License.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * You may obtain a copy of the License at
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *      http://www.apache.org/licenses/LICENSE-2.0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Unless required by applicable law or agreed to in writing, software
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * distributed under the License is distributed on an "AS IS" BASIS,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * See the License for the specific language governing permissions and
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * limitations under the License.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+/**
+ * @extends {MDCComponent<!MDCTopAppBarBaseFoundation>}
+ * @final
+ */
+var MDCTopAppBar = function (_MDCComponent) {
+  _inherits(MDCTopAppBar, _MDCComponent);
+
+  /**
+   * @param {...?} args
+   */
+  function MDCTopAppBar() {
+    var _ref;
+
+    _classCallCheck(this, MDCTopAppBar);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    /** @private {?Element} */
+    var _this = _possibleConstructorReturn(this, (_ref = MDCTopAppBar.__proto__ || Object.getPrototypeOf(MDCTopAppBar)).call.apply(_ref, [this].concat(args)));
+
+    _this.navIcon_;
+    /** @type {?Array<MDCRipple>} */
+    _this.iconRipples_;
+    return _this;
+  }
+
+  _createClass(MDCTopAppBar, [{
+    key: 'initialize',
+    value: function initialize() {
+      var rippleFactory = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : function (el) {
+        return _index.MDCRipple.attachTo(el);
+      };
+
+      this.navIcon_ = this.root_.querySelector(_constants.strings.NAVIGATION_ICON_SELECTOR);
+
+      // Get all icons in the toolbar and instantiate the ripples
+      var icons = [].slice.call(this.root_.querySelectorAll(_constants.strings.ACTION_ITEM_SELECTOR));
+      if (this.navIcon_) {
+        icons.push(this.navIcon_);
+      }
+
+      this.iconRipples_ = icons.map(function (icon) {
+        var ripple = rippleFactory(icon);
+        ripple.unbounded = true;
+        return ripple;
+      });
+    }
+  }, {
+    key: 'destroy',
+    value: function destroy() {
+      this.iconRipples_.forEach(function (iconRipple) {
+        return iconRipple.destroy();
+      });
+      _get(MDCTopAppBar.prototype.__proto__ || Object.getPrototypeOf(MDCTopAppBar.prototype), 'destroy', this).call(this);
+    }
+
+    /**
+     * @param {!Element} root
+     * @return {!MDCTopAppBar}
+     */
+
+  }, {
+    key: 'getDefaultFoundation',
+
+
+    /**
+     * @return {!MDCTopAppBarBaseFoundation}
+     */
+    value: function getDefaultFoundation() {
+      var _this2 = this;
+
+      /** @type {!MDCTopAppBarAdapter} */
+      var adapter = /** @type {!MDCTopAppBarAdapter} */Object.assign({
+        hasClass: function hasClass(className) {
+          return _this2.root_.classList.contains(className);
+        },
+        addClass: function addClass(className) {
+          return _this2.root_.classList.add(className);
+        },
+        removeClass: function removeClass(className) {
+          return _this2.root_.classList.remove(className);
+        },
+        setStyle: function setStyle(property, value) {
+          return _this2.root_.style.setProperty(property, value);
+        },
+        getTopAppBarHeight: function getTopAppBarHeight() {
+          return _this2.root_.clientHeight;
+        },
+        registerNavigationIconInteractionHandler: function registerNavigationIconInteractionHandler(evtType, handler) {
+          if (_this2.navIcon_) {
+            _this2.navIcon_.addEventListener(evtType, handler);
+          }
+        },
+        deregisterNavigationIconInteractionHandler: function deregisterNavigationIconInteractionHandler(evtType, handler) {
+          if (_this2.navIcon_) {
+            _this2.navIcon_.removeEventListener(evtType, handler);
+          }
+        },
+        notifyNavigationIconClicked: function notifyNavigationIconClicked() {
+          _this2.emit(_constants.strings.NAVIGATION_EVENT, {});
+        },
+        registerScrollHandler: function registerScrollHandler(handler) {
+          return window.addEventListener('scroll', handler);
+        },
+        deregisterScrollHandler: function deregisterScrollHandler(handler) {
+          return window.removeEventListener('scroll', handler);
+        },
+        registerResizeHandler: function registerResizeHandler(handler) {
+          return window.addEventListener('resize', handler);
+        },
+        deregisterResizeHandler: function deregisterResizeHandler(handler) {
+          return window.removeEventListener('resize', handler);
+        },
+        getViewportScrollY: function getViewportScrollY() {
+          return window.pageYOffset;
+        },
+        getTotalActionItems: function getTotalActionItems() {
+          return _this2.root_.querySelectorAll(_constants.strings.ACTION_ITEM_SELECTOR).length;
+        }
+      });
+
+      /** @type {!MDCTopAppBarBaseFoundation} */
+      var foundation = void 0;
+      if (this.root_.classList.contains(_constants.cssClasses.SHORT_CLASS)) {
+        foundation = new _foundation6.default(adapter);
+      } else if (this.root_.classList.contains(_constants.cssClasses.FIXED_CLASS)) {
+        foundation = new _foundation4.default(adapter);
+      } else {
+        foundation = new _foundation8.default(adapter);
+      }
+
+      return foundation;
+    }
+  }], [{
+    key: 'attachTo',
+    value: function attachTo(root) {
+      return new MDCTopAppBar(root);
+    }
+  }]);
+
+  return MDCTopAppBar;
+}(_component2.default);
+
+exports.MDCTopAppBar = MDCTopAppBar;
+exports.MDCTopAppBarBaseFoundation = _foundation2.default;
+exports.MDCTopAppBarFoundation = _foundation8.default;
+exports.MDCFixedTopAppBarFoundation = _foundation4.default;
+exports.MDCShortTopAppBarFoundation = _foundation6.default;
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+var _constants = __webpack_require__(11);
+
+var _adapter = __webpack_require__(10);
+
+var _adapter2 = _interopRequireDefault(_adapter);
+
+var _foundation = __webpack_require__(12);
+
+var _foundation2 = _interopRequireDefault(_foundation);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @license
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Copyright 2018 Google Inc. All Rights Reserved.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Licensed under the Apache License, Version 2.0 (the "License");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * you may not use this file except in compliance with the License.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * You may obtain a copy of the License at
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *      http://www.apache.org/licenses/LICENSE-2.0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Unless required by applicable law or agreed to in writing, software
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * distributed under the License is distributed on an "AS IS" BASIS,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * See the License for the specific language governing permissions and
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * limitations under the License.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+/**
+ * @extends {MDCTopAppBarFoundation<!MDCFixedTopAppBarFoundation>}
+ * @final
+ */
+var MDCFixedTopAppBarFoundation = function (_MDCTopAppBarFoundati) {
+  _inherits(MDCFixedTopAppBarFoundation, _MDCTopAppBarFoundati);
+
+  /**
+   * @param {!MDCTopAppBarAdapter} adapter
+   */
+  function MDCFixedTopAppBarFoundation(adapter) {
+    _classCallCheck(this, MDCFixedTopAppBarFoundation);
+
+    /** State variable for the previous scroll iteration top app bar state */
+    var _this = _possibleConstructorReturn(this, (MDCFixedTopAppBarFoundation.__proto__ || Object.getPrototypeOf(MDCFixedTopAppBarFoundation)).call(this, adapter));
+
+    _this.wasScrolled_ = false;
+
+    _this.scrollHandler_ = function () {
+      return _this.fixedScrollHandler_();
+    };
+    return _this;
+  }
+
+  _createClass(MDCFixedTopAppBarFoundation, [{
+    key: 'init',
+    value: function init() {
+      _get(MDCFixedTopAppBarFoundation.prototype.__proto__ || Object.getPrototypeOf(MDCFixedTopAppBarFoundation.prototype), 'init', this).call(this);
+      this.adapter_.registerScrollHandler(this.scrollHandler_);
+    }
+  }, {
+    key: 'destroy',
+    value: function destroy() {
+      _get(MDCFixedTopAppBarFoundation.prototype.__proto__ || Object.getPrototypeOf(MDCFixedTopAppBarFoundation.prototype), 'destroy', this).call(this);
+      this.adapter_.deregisterScrollHandler(this.scrollHandler_);
+    }
+
+    /**
+     * Scroll handler for applying/removing the modifier class
+     * on the fixed top app bar.
+     */
+
+  }, {
+    key: 'fixedScrollHandler_',
+    value: function fixedScrollHandler_() {
+      var currentScroll = this.adapter_.getViewportScrollY();
+
+      if (currentScroll <= 0) {
+        if (this.wasScrolled_) {
+          this.adapter_.removeClass(_constants.cssClasses.FIXED_SCROLLED_CLASS);
+          this.wasScrolled_ = false;
+        }
+      } else {
+        if (!this.wasScrolled_) {
+          this.adapter_.addClass(_constants.cssClasses.FIXED_SCROLLED_CLASS);
+          this.wasScrolled_ = true;
+        }
+      }
+    }
+  }]);
+
+  return MDCFixedTopAppBarFoundation;
+}(_foundation2.default);
+
+exports.default = MDCFixedTopAppBarFoundation;
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+var _adapter = __webpack_require__(10);
+
+var _adapter2 = _interopRequireDefault(_adapter);
+
+var _foundation = __webpack_require__(12);
+
+var _foundation2 = _interopRequireDefault(_foundation);
+
+var _constants = __webpack_require__(11);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @license
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Copyright 2018 Google Inc. All Rights Reserved.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Licensed under the Apache License, Version 2.0 (the "License");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * you may not use this file except in compliance with the License.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * You may obtain a copy of the License at
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *      http://www.apache.org/licenses/LICENSE-2.0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Unless required by applicable law or agreed to in writing, software
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * distributed under the License is distributed on an "AS IS" BASIS,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * See the License for the specific language governing permissions and
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * limitations under the License.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+/**
+ * @extends {MDCTopAppBarBaseFoundation<!MDCShortTopAppBarFoundation>}
+ * @final
+ */
+var MDCShortTopAppBarFoundation = function (_MDCTopAppBarBaseFoun) {
+  _inherits(MDCShortTopAppBarFoundation, _MDCTopAppBarBaseFoun);
+
+  /**
+   * @param {!MDCTopAppBarAdapter} adapter
+   */
+  function MDCShortTopAppBarFoundation(adapter) {
+    _classCallCheck(this, MDCShortTopAppBarFoundation);
+
+    // State variable for the current top app bar state
+    var _this = _possibleConstructorReturn(this, (MDCShortTopAppBarFoundation.__proto__ || Object.getPrototypeOf(MDCShortTopAppBarFoundation)).call(this, adapter));
+
+    _this.isCollapsed = false;
+
+    _this.scrollHandler_ = function () {
+      return _this.shortAppBarScrollHandler_();
+    };
+    return _this;
+  }
+
+  _createClass(MDCShortTopAppBarFoundation, [{
+    key: 'init',
+    value: function init() {
+      _get(MDCShortTopAppBarFoundation.prototype.__proto__ || Object.getPrototypeOf(MDCShortTopAppBarFoundation.prototype), 'init', this).call(this);
+      var isAlwaysCollapsed = this.adapter_.hasClass(_constants.cssClasses.SHORT_COLLAPSED_CLASS);
+
+      if (this.adapter_.getTotalActionItems() > 0) {
+        this.adapter_.addClass(_constants.cssClasses.SHORT_HAS_ACTION_ITEM_CLASS);
+      }
+
+      if (!isAlwaysCollapsed) {
+        this.adapter_.registerScrollHandler(this.scrollHandler_);
+        this.shortAppBarScrollHandler_();
+      }
+    }
+  }, {
+    key: 'destroy',
+    value: function destroy() {
+      _get(MDCShortTopAppBarFoundation.prototype.__proto__ || Object.getPrototypeOf(MDCShortTopAppBarFoundation.prototype), 'destroy', this).call(this);
+      this.adapter_.deregisterScrollHandler(this.scrollHandler_);
+    }
+
+    /**
+     * Scroll handler for applying/removing the collapsed modifier class
+     * on the short top app bar.
+     * @private
+     */
+
+  }, {
+    key: 'shortAppBarScrollHandler_',
+    value: function shortAppBarScrollHandler_() {
+      var currentScroll = this.adapter_.getViewportScrollY();
+
+      if (currentScroll <= 0) {
+        if (this.isCollapsed) {
+          this.adapter_.removeClass(_constants.cssClasses.SHORT_COLLAPSED_CLASS);
+          this.isCollapsed = false;
+        }
+      } else {
+        if (!this.isCollapsed) {
+          this.adapter_.addClass(_constants.cssClasses.SHORT_COLLAPSED_CLASS);
+          this.isCollapsed = true;
+        }
+      }
+    }
+  }]);
+
+  return MDCShortTopAppBarFoundation;
+}(_foundation2.default);
+
+exports.default = MDCShortTopAppBarFoundation;
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+var _adapter = __webpack_require__(10);
+
+var _adapter2 = _interopRequireDefault(_adapter);
+
+var _foundation = __webpack_require__(12);
+
+var _foundation2 = _interopRequireDefault(_foundation);
+
+var _constants = __webpack_require__(11);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @license
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Copyright 2018 Google Inc. All Rights Reserved.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Licensed under the Apache License, Version 2.0 (the "License");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * you may not use this file except in compliance with the License.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * You may obtain a copy of the License at
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *      http://www.apache.org/licenses/LICENSE-2.0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Unless required by applicable law or agreed to in writing, software
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * distributed under the License is distributed on an "AS IS" BASIS,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * See the License for the specific language governing permissions and
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * limitations under the License.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+var INITIAL_VALUE = 0;
+/**
+ * @extends {MDCTopAppBarBaseFoundation<!MDCTopAppBarFoundation>}
+ * @final
+ */
+
+var MDCTopAppBarFoundation = function (_MDCTopAppBarBaseFoun) {
+  _inherits(MDCTopAppBarFoundation, _MDCTopAppBarBaseFoun);
+
+  /**
+   * @param {!MDCTopAppBarAdapter} adapter
+   */
+  function MDCTopAppBarFoundation(adapter) {
+    _classCallCheck(this, MDCTopAppBarFoundation);
+
+    /**
+     * Used for diffs of current scroll position vs previous scroll position
+     * @private {number}
+     */
+    var _this = _possibleConstructorReturn(this, (MDCTopAppBarFoundation.__proto__ || Object.getPrototypeOf(MDCTopAppBarFoundation)).call(this, adapter));
+
+    _this.lastScrollPosition_ = _this.adapter_.getViewportScrollY();
+
+    /**
+     * Used to verify when the top app bar is completely showing or completely hidden
+     * @private {number}
+     */
+    _this.topAppBarHeight_ = _this.adapter_.getTopAppBarHeight();
+
+    /**
+     * wasDocked_ is used to indicate if the top app bar was docked in the previous
+     * scroll handler iteration.
+     * @private {boolean}
+     */
+    _this.wasDocked_ = true;
+
+    /**
+     * isDockedShowing_ is used to indicate if the top app bar is docked in the fully
+     * shown position.
+     * @private {boolean}
+     */
+    _this.isDockedShowing_ = true;
+
+    /**
+     * Variable for current scroll position of the top app bar
+     * @private {number}
+     */
+    _this.currentAppBarOffsetTop_ = 0;
+
+    /**
+     * Used to prevent the top app bar from being scrolled out of view during resize events
+     * @private {boolean} */
+    _this.isCurrentlyBeingResized_ = false;
+
+    /**
+     * The timeout that's used to throttle the resize events
+     * @private {number}
+     */
+    _this.resizeThrottleId_ = INITIAL_VALUE;
+
+    /**
+     * The timeout that's used to debounce toggling the isCurrentlyBeingResized_ variable after a resize
+     * @private {number}
+     */
+    _this.resizeDebounceId_ = INITIAL_VALUE;
+
+    _this.scrollHandler_ = function () {
+      return _this.topAppBarScrollHandler_();
+    };
+    _this.resizeHandler_ = function () {
+      return _this.topAppBarResizeHandler_();
+    };
+    return _this;
+  }
+
+  _createClass(MDCTopAppBarFoundation, [{
+    key: 'init',
+    value: function init() {
+      _get(MDCTopAppBarFoundation.prototype.__proto__ || Object.getPrototypeOf(MDCTopAppBarFoundation.prototype), 'init', this).call(this);
+      this.adapter_.registerScrollHandler(this.scrollHandler_);
+      this.adapter_.registerResizeHandler(this.resizeHandler_);
+    }
+  }, {
+    key: 'destroy',
+    value: function destroy() {
+      _get(MDCTopAppBarFoundation.prototype.__proto__ || Object.getPrototypeOf(MDCTopAppBarFoundation.prototype), 'destroy', this).call(this);
+      this.adapter_.deregisterScrollHandler(this.scrollHandler_);
+      this.adapter_.deregisterResizeHandler(this.resizeHandler_);
+      this.adapter_.setStyle('top', '');
+    }
+
+    /**
+     * Function to determine if the DOM needs to update.
+     * @return {boolean}
+     * @private
+     */
+
+  }, {
+    key: 'checkForUpdate_',
+    value: function checkForUpdate_() {
+      var offscreenBoundaryTop = -this.topAppBarHeight_;
+      var hasAnyPixelsOffscreen = this.currentAppBarOffsetTop_ < 0;
+      var hasAnyPixelsOnscreen = this.currentAppBarOffsetTop_ > offscreenBoundaryTop;
+      var partiallyShowing = hasAnyPixelsOffscreen && hasAnyPixelsOnscreen;
+
+      // If it's partially showing, it can't be docked.
+      if (partiallyShowing) {
+        this.wasDocked_ = false;
+      } else {
+        // Not previously docked and not partially showing, it's now docked.
+        if (!this.wasDocked_) {
+          this.wasDocked_ = true;
+          return true;
+        } else if (this.isDockedShowing_ !== hasAnyPixelsOnscreen) {
+          this.isDockedShowing_ = hasAnyPixelsOnscreen;
+          return true;
+        }
+      }
+
+      return partiallyShowing;
+    }
+
+    /**
+     * Function to move the top app bar if needed.
+     * @private
+     */
+
+  }, {
+    key: 'moveTopAppBar_',
+    value: function moveTopAppBar_() {
+      if (this.checkForUpdate_()) {
+        // Once the top app bar is fully hidden we use the max potential top app bar height as our offset
+        // so the top app bar doesn't show if the window resizes and the new height > the old height.
+        var offset = this.currentAppBarOffsetTop_;
+        if (Math.abs(offset) >= this.topAppBarHeight_) {
+          offset = -_constants.numbers.MAX_TOP_APP_BAR_HEIGHT;
+        }
+
+        this.adapter_.setStyle('top', offset + 'px');
+      }
+    }
+
+    /**
+     * Scroll handler for the default scroll behavior of the top app bar.
+     * @private
+     */
+
+  }, {
+    key: 'topAppBarScrollHandler_',
+    value: function topAppBarScrollHandler_() {
+      var currentScrollPosition = Math.max(this.adapter_.getViewportScrollY(), 0);
+      var diff = currentScrollPosition - this.lastScrollPosition_;
+      this.lastScrollPosition_ = currentScrollPosition;
+
+      // If the window is being resized the lastScrollPosition_ needs to be updated but the
+      // current scroll of the top app bar should stay in the same position.
+      if (!this.isCurrentlyBeingResized_) {
+        this.currentAppBarOffsetTop_ -= diff;
+
+        if (this.currentAppBarOffsetTop_ > 0) {
+          this.currentAppBarOffsetTop_ = 0;
+        } else if (Math.abs(this.currentAppBarOffsetTop_) > this.topAppBarHeight_) {
+          this.currentAppBarOffsetTop_ = -this.topAppBarHeight_;
+        }
+
+        this.moveTopAppBar_();
+      }
+    }
+
+    /**
+     * Top app bar resize handler that throttle/debounce functions that execute updates.
+     * @private
+     */
+
+  }, {
+    key: 'topAppBarResizeHandler_',
+    value: function topAppBarResizeHandler_() {
+      var _this2 = this;
+
+      // Throttle resize events 10 p/s
+      if (!this.resizeThrottleId_) {
+        this.resizeThrottleId_ = setTimeout(function () {
+          _this2.resizeThrottleId_ = INITIAL_VALUE;
+          _this2.throttledResizeHandler_();
+        }, _constants.numbers.DEBOUNCE_THROTTLE_RESIZE_TIME_MS);
+      }
+
+      this.isCurrentlyBeingResized_ = true;
+
+      if (this.resizeDebounceId_) {
+        clearTimeout(this.resizeDebounceId_);
+      }
+
+      this.resizeDebounceId_ = setTimeout(function () {
+        _this2.topAppBarScrollHandler_();
+        _this2.isCurrentlyBeingResized_ = false;
+        _this2.resizeDebounceId_ = INITIAL_VALUE;
+      }, _constants.numbers.DEBOUNCE_THROTTLE_RESIZE_TIME_MS);
+    }
+
+    /**
+     * Throttled function that updates the top app bar scrolled values if the
+     * top app bar height changes.
+     * @private
+     */
+
+  }, {
+    key: 'throttledResizeHandler_',
+    value: function throttledResizeHandler_() {
+      var currentHeight = this.adapter_.getTopAppBarHeight();
+      if (this.topAppBarHeight_ !== currentHeight) {
+        this.wasDocked_ = false;
+
+        // Since the top app bar has a different height depending on the screen width, this
+        // will ensure that the top app bar remains in the correct location if
+        // completely hidden and a resize makes the top app bar a different height.
+        this.currentAppBarOffsetTop_ -= this.topAppBarHeight_ - currentHeight;
+        this.topAppBarHeight_ = currentHeight;
+      }
+      this.topAppBarScrollHandler_();
+    }
+  }]);
+
+  return MDCTopAppBarFoundation;
+}(_foundation2.default);
+
+exports.default = MDCTopAppBarFoundation;
 
 /***/ })
 /******/ ]);

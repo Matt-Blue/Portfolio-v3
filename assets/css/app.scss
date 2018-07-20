@@ -1,9 +1,5 @@
-@import "@material/button/mdc-button";
+@import "./colors.scss";
 
-$primary: orange;
-
-.button-primary {
-    @include mdc-button-ink-color($primary);
-    @include mdc-button-outline-color($primary);
-    @include mdc-states($primary);
-}
+@import "./general.scss";
+@import "./buttons.scss";
+@import "./nav.scss";
