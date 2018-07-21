@@ -1,19 +1,2 @@
 @import "@material/drawer/mdc-drawer";
 @import "@material/list/mdc-list";
-
-#navbutton {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: auto;
-    bottom: auto;
-    margin: 1rem;
-    padding: 1rem;
-    text-decoration: none;
-}
-#navicon {    
-    color: $primary;
-    &:hover {
-        color: $secondary;
-    }
-}

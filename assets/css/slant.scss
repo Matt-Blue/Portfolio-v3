@@ -1,0 +1,17 @@
+.slant-wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    grid-template-rows: 10rem;
+    grid-gap: 0;
+    overflow: hidden;
+}
+.slant-up-secondary {
+    grid-column: col-start / -1;
+    grid-row: 1;
+    background: linear-gradient(to right bottom, $background 50%, $secondary 50%);
+}
+.slant-down-secondary {
+    grid-column: col-start / -1;
+    grid-row: 1;
+    background: linear-gradient(to right bottom, $secondary 50%, $background 50%);
+}

@@ -1,0 +1,42 @@
+// 12 column app grid
+.row {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; // 12 equal cols
+    grid-template-rows: auto; // one row with auto height
+    grid-gap: 0.5rem; // gap between cells
+    align-items: center; // content float center
+    align-content: start; // row float to top
+}
+// 8 column body
+.body {
+
+}
+
+// testing
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    grid-gap: 1rem;
+}
+.item1 {
+    grid-column: col-start / span 3;
+    background-color: $primary;
+}
+.item2 {
+    grid-column: col-start 6 / span 4 ;
+    grid-row: 1 / 3;
+    background-color: $primary;
+}
+.item3 {
+    grid-column: col-start 2 / span 2;
+    grid-row: 2;
+    background-color: $primary;
+}
+.item4 {
+    grid-column: col-start 3 / -1;
+    grid-row: 3;
+    background-color: $primary;
+}
+
+.container {
+    display: grid;
+}

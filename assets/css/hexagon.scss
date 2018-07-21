@@ -1,0 +1,60 @@
+// General
+.hexagon-wrapper {
+    z-index: 1;
+    text-align: center;
+    margin: 20px;
+    position: absolute;
+    display: inline-block;
+}
+.hexagon {
+    height: 100%;
+    width: calc(100% * 0.57735);
+    display: inline-block; 
+}  
+.hexagon:before {
+    position: absolute;
+    top: 0;
+    right: calc((100% / 2) - ((100% * 0.57735) / 2));
+    background-color: inherit;
+    height: inherit;
+    width: inherit;
+    content: '';
+    transform: rotateZ(60deg);
+}  
+.hexagon:after {
+    position: absolute;
+    top: 0;
+    right: calc((100% / 2) - ((100% * 0.57735) / 2));
+    background-color: inherit;
+    height: inherit;
+    width: inherit;
+    content: '';
+    transform: rotateZ(-60deg);
+}
+.rotate {
+    -webkit-animation: rotation 20s infinite linear;
+}
+@-webkit-keyframes rotation {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(359deg); }
+}
+
+// Navigation Icon
+.hexagon-primary {
+    background: $primary;
+    &:hover, &:active {
+        background: $secondary;
+    }
+}
+.hexagon-navicon {
+    width: 5rem;
+    height: 5rem;
+}
+.navicon {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $white;
+}
