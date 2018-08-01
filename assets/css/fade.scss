@@ -1,26 +1,26 @@
-.slant-wrapper {
+.fade-wrapper {
     display: grid;
     grid-template-columns: repeat(12, [col-start] 1fr);
     grid-template-rows: 10rem;
     grid-gap: 0;
     overflow: hidden;
 }
-.slant-up-secondary {
+.fade-up-secondary {
     grid-column: col-start / -1;
     grid-row: 1;
     background: linear-gradient(rgba(0,0,0,0), $secondary);
 }
-.slant-down-secondary {
+.fade-down-secondary {
     grid-column: col-start / -1;
     grid-row: 1;
     background: linear-gradient($secondary, rgba(0,0,0,0));
 }
-.slant-down-secondary-background {
+.fade-down-secondary-background {
     grid-column: col-start / -1;
     grid-row: 1;
     background: linear-gradient($secondary, $background);
 }
-.slant-down-secondary-primary {
+.fade-down-secondary-primary {
     grid-column: col-start / -1;
     grid-row: 1;
     background: linear-gradient($secondary, $primary);
