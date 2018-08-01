@@ -1,0 +1,22 @@
+
+.slant-up-right {
+    clip-path: polygon(0 0, 1600px 0, 1600px 87%, 0 100%);
+}
+
+.slant-wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    grid-template-rows: 10rem;
+    grid-gap: 0;
+    overflow: hidden;
+}
+.slant-secondary-background {
+    grid-column: col-start / -1;
+    grid-row: 1;
+    background: linear-gradient(to right bottom, $secondary 50%, $background 50%);
+}
+.slant-secondary-primary {
+    grid-column: col-start / -1;
+    grid-row: 1;
+    background: linear-gradient(to right bottom, $secondary 50%, $primary 50%);
+}

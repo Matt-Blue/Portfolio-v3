@@ -1,10 +1,10 @@
 body {
-  background: linear-gradient(to right, lightgreen, aqua);
+  background: linear-gradient(to right, #5aff5a, cyan);
   font-family: 'Roboto';
   margin: 0;
   padding: 0; }
   body .secondary {
-    background-color: lightgreen; }
+    background-color: #5aff5a; }
 
 h1, h2, h3, h4, h5 {
   font-size: 250%; }
@@ -16,13 +16,13 @@ p {
   font-size: 120%; }
 
 .background {
-  background-color: #e1e1e1; }
+  background-color: #646464; }
 
 .background-primary {
-  background-color: aqua; }
+  background-color: cyan; }
 
 .background-secondary {
-  background-color: lightgreen; }
+  background-color: #5aff5a; }
 
 .row {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -43,26 +43,27 @@ p {
 .headline {
   text-align: center;
   grid-column: col-start / -1;
-  grid-row: 1 / 3; }
+  grid-row: 1 / 3;
+  margin-bottom: 5rem; }
 
 .item1 {
   grid-column: col-start / span 3;
-  background-color: aqua; }
+  background-color: cyan; }
 
 .item2 {
   grid-column: col-start 6 / span 4;
   grid-row: 1 / 3;
-  background-color: aqua; }
+  background-color: cyan; }
 
 .item3 {
   grid-column: col-start 2 / span 2;
   grid-row: 2;
-  background-color: aqua; }
+  background-color: cyan; }
 
 .item4 {
   grid-column: col-start 3 / -1;
   grid-row: 3;
-  background-color: aqua; }
+  background-color: cyan; }
 
 .container {
   display: grid; }
@@ -801,21 +802,57 @@ a.mdc-list-item {
   position: absolute;
   top: 50%;
   left: 50%;
-  color: black;
+  color: #242424;
   padding: 3rem; }
 
 .downicon {
-  position: absolute;
-  margin-top: 2rem;
-  left: 50%;
-  color: black; }
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+  color: #242424; }
   .downicon:hover, .downicon:active {
-    color: aqua; }
+    -webkit-animation: downicon 2s;
+            animation: downicon 2s;
+    -webkit-animation-iteration-count: 5s;
+            animation-iteration-count: 5s; }
+
+@-webkit-keyframes downicon {
+  10% {
+    -webkit-transform: translate(0rem, 0rem) rotate(-15deg);
+            transform: translate(0rem, 0rem) rotate(-15deg); }
+  20% {
+    -webkit-transform: translate(0rem, 0rem) rotate(0deg);
+            transform: translate(0rem, 0rem) rotate(0deg); }
+  30% {
+    -webkit-transform: translate(0rem, 0rem) rotate(-15deg);
+            transform: translate(0rem, 0rem) rotate(-15deg); }
+  40% {
+    -webkit-transform: translate(0rem, 0rem) rotate(0deg);
+            transform: translate(0rem, 0rem) rotate(0deg); } }
+
+@keyframes downicon {
+  10% {
+    -webkit-transform: translate(0rem, 0rem) rotate(-15deg);
+            transform: translate(0rem, 0rem) rotate(-15deg); }
+  20% {
+    -webkit-transform: translate(0rem, 0rem) rotate(0deg);
+            transform: translate(0rem, 0rem) rotate(0deg); }
+  30% {
+    -webkit-transform: translate(0rem, 0rem) rotate(-15deg);
+            transform: translate(0rem, 0rem) rotate(-15deg); }
+  40% {
+    -webkit-transform: translate(0rem, 0rem) rotate(0deg);
+            transform: translate(0rem, 0rem) rotate(0deg); } }
 
 .top-left-fixed {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 3; }
+
+.bottom-right-fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
   z-index: 3; }
 
 .mdc-button {
@@ -1043,13 +1080,13 @@ a.mdc-list-item {
   font-size: .8125rem; }
 
 .button-primary:not(:disabled) {
-  color: aqua; }
+  color: cyan; }
 
 .button-primary:not(:disabled) {
-  border-color: aqua; }
+  border-color: cyan; }
 
 .button-primary::before, .button-primary::after {
-  background-color: aqua; }
+  background-color: cyan; }
 
 .button-primary:hover::before {
   opacity: 0.08; }
@@ -1069,13 +1106,13 @@ a.mdc-list-item {
   --mdc-ripple-fg-opacity: 0.32; }
 
 .button-secondary:not(:disabled) {
-  color: lightgreen; }
+  color: #5aff5a; }
 
 .button-secondary:not(:disabled) {
-  border-color: lightgreen; }
+  border-color: #5aff5a; }
 
 .button-secondary::before, .button-secondary::after {
-  background-color: lightgreen; }
+  background-color: #5aff5a; }
 
 .button-secondary:hover::before {
   opacity: 0.08; }
@@ -1095,7 +1132,7 @@ a.mdc-list-item {
   --mdc-ripple-fg-opacity: 0.32; }
 
 .button-secondary:not(:disabled) {
-  background-color: lightgreen; }
+  background-color: #5aff5a; }
 
 .button-secondary:not(:disabled) {
   color: rgba(0, 0, 0, 0.87);
@@ -1127,7 +1164,7 @@ a.mdc-list-item {
   --mdc-ripple-fg-opacity: 0.16; }
 
 .button-secondary:not(:disabled) {
-  border-color: black; }
+  border-color: #242424; }
 
 .fade-wrapper {
   display: grid;
@@ -1139,22 +1176,43 @@ a.mdc-list-item {
 .fade-up-secondary {
   grid-column: col-start / -1;
   grid-row: 1;
-  background: linear-gradient(rgba(0, 0, 0, 0), lightgreen); }
+  background: linear-gradient(rgba(0, 0, 0, 0), #5aff5a); }
 
 .fade-down-secondary {
   grid-column: col-start / -1;
   grid-row: 1;
-  background: linear-gradient(lightgreen, rgba(0, 0, 0, 0)); }
+  background: linear-gradient(#5aff5a, rgba(0, 0, 0, 0)); }
 
 .fade-down-secondary-background {
   grid-column: col-start / -1;
   grid-row: 1;
-  background: linear-gradient(lightgreen, #e1e1e1); }
+  background: linear-gradient(#5aff5a, #646464); }
 
 .fade-down-secondary-primary {
   grid-column: col-start / -1;
   grid-row: 1;
-  background: linear-gradient(lightgreen, aqua); }
+  background: linear-gradient(#5aff5a, cyan); }
+
+.slant-up-right {
+  -webkit-clip-path: polygon(0 0, 1600px 0, 1600px 87%, 0 100%);
+          clip-path: polygon(0 0, 1600px 0, 1600px 87%, 0 100%); }
+
+.slant-wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  grid-template-rows: 10rem;
+  grid-gap: 0;
+  overflow: hidden; }
+
+.slant-secondary-background {
+  grid-column: col-start / -1;
+  grid-row: 1;
+  background: linear-gradient(to right bottom, #5aff5a 50%, #646464 50%); }
+
+.slant-secondary-primary {
+  grid-column: col-start / -1;
+  grid-row: 1;
+  background: linear-gradient(to right bottom, #5aff5a 50%, cyan 50%); }
 
 .hexagon {
   height: 100%;
@@ -1206,17 +1264,17 @@ a.mdc-list-item {
   z-index: 1; }
 
 .hexagon-primary {
-  background: aqua; }
+  background: cyan; }
   .hexagon-primary:hover, .hexagon-primary:active {
-    background: lightgreen; }
+    background: #5aff5a; }
 
 .hexagon-secondary {
-  background: lightgreen; }
+  background: #5aff5a; }
   .hexagon-secondary:hover, .hexagon-secondary:active {
-    background: aqua; }
+    background: cyan; }
 
 .hexagon-emphasis {
-  background: black; }
+  background: #242424; }
 
 .rotate {
   -webkit-animation: rotation 20s infinite linear; }
