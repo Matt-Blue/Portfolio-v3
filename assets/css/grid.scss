@@ -1,3 +1,4 @@
+
 // 12 column app grid
 .row {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; // 12 equal cols
@@ -16,6 +17,10 @@
     display: grid;
     grid-template-columns: repeat(12, [col-start] 1fr);
     grid-gap: 1rem;
+}
+.row {
+    grid-column: col-start / -1;
+    grid-row: 1;
 }
 .item1 {
     grid-column: col-start / span 3;

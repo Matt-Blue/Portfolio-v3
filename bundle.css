@@ -17,6 +17,10 @@ body {
   grid-template-columns: repeat(12, [col-start] 1fr);
   grid-gap: 1rem; }
 
+.row {
+  grid-column: col-start / -1;
+  grid-row: 1; }
+
 .item1 {
   grid-column: col-start / span 3;
   background-color: aqua; }
@@ -763,6 +767,20 @@ a.mdc-list-item {
   /* @alternate */
   color: var(--mdc-theme-text-primary-on-background, rgba(0, 0, 0, 0.87)); }
 
+.navicon {
+  z-index: 3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: black;
+  padding: 3rem; }
+
+.top-left-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3; }
+
 .mdc-button {
   font-family: Roboto, sans-serif;
   -moz-osx-font-smoothing: grayscale;
@@ -1049,23 +1067,28 @@ a.mdc-list-item {
 .slant-up-secondary {
   grid-column: col-start / -1;
   grid-row: 1;
-  background: linear-gradient(to right bottom, grey 50%, lightgreen 50%); }
+  background: linear-gradient(rgba(0, 0, 0, 0), lightgreen); }
 
 .slant-down-secondary {
   grid-column: col-start / -1;
   grid-row: 1;
-  background: linear-gradient(to right bottom, lightgreen 50%, grey 50%); }
-
-.hexagon-wrapper {
-  z-index: 1;
-  text-align: center;
-  margin: 20px;
-  position: absolute;
-  display: inline-block; }
+  background: linear-gradient(lightgreen, rgba(0, 0, 0, 0)); }
 
 .hexagon {
   height: 100%;
   width: calc(100% * 0.57735);
+  display: inline-block; }
+
+.hexagon-wrapper {
+  text-align: center;
+  margin: 1.25rem;
+  position: absolute;
+  display: inline-block; }
+
+.hexagon-wrapper-border {
+  text-align: center;
+  margin: 1rem;
+  position: absolute;
   display: inline-block; }
 
 .hexagon:before {
@@ -1090,6 +1113,29 @@ a.mdc-list-item {
   -webkit-transform: rotateZ(-60deg);
           transform: rotateZ(-60deg); }
 
+.hexagon-5rem {
+  width: 5rem;
+  height: 5rem;
+  z-index: 2; }
+
+.hexagon-5rem-border {
+  width: 5.5rem;
+  height: 5.5rem;
+  z-index: 1; }
+
+.hexagon-primary {
+  background: aqua; }
+  .hexagon-primary:hover, .hexagon-primary:active {
+    background: lightgreen; }
+
+.hexagon-secondary {
+  background: lightgreen; }
+  .hexagon-secondary:hover, .hexagon-secondary:active {
+    background: aqua; }
+
+.hexagon-emphasis {
+  background: black; }
+
 .rotate {
   -webkit-animation: rotation 20s infinite linear; }
 
@@ -1098,21 +1144,3 @@ a.mdc-list-item {
     -webkit-transform: rotate(0deg); }
   to {
     -webkit-transform: rotate(359deg); } }
-
-.hexagon-primary {
-  background: aqua; }
-  .hexagon-primary:hover, .hexagon-primary:active {
-    background: lightgreen; }
-
-.hexagon-navicon {
-  width: 5rem;
-  height: 5rem; }
-
-.navicon {
-  z-index: 2;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  color: rgba(255, 255, 255, 0.904); }

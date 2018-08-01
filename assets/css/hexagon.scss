@@ -1,16 +1,26 @@
-// General
-.hexagon-wrapper {
-    z-index: 1;
-    text-align: center;
-    margin: 20px;
-    position: absolute;
-    display: inline-block;
-}
+
+// Hexagon General
+
 .hexagon {
     height: 100%;
     width: calc(100% * 0.57735);
-    display: inline-block; 
-}  
+    display: inline-block;
+}
+
+.hexagon-wrapper {
+    text-align: center;
+    margin: 1.25rem;
+    position: absolute;
+    display: inline-block;
+}
+
+.hexagon-wrapper-border {
+    text-align: center;
+    margin: 1rem;
+    position: absolute;
+    display: inline-block;    
+}
+
 .hexagon:before {
     position: absolute;
     top: 0;
@@ -20,7 +30,8 @@
     width: inherit;
     content: '';
     transform: rotateZ(60deg);
-}  
+}
+
 .hexagon:after {
     position: absolute;
     top: 0;
@@ -31,30 +42,47 @@
     content: '';
     transform: rotateZ(-60deg);
 }
-.rotate {
-    -webkit-animation: rotation 20s infinite linear;
-}
-@-webkit-keyframes rotation {
-    from { -webkit-transform: rotate(0deg); }
-    to { -webkit-transform: rotate(359deg); }
+
+// Size
+
+.hexagon-5rem {
+    width: 5rem;
+    height: 5rem;
+    z-index: 2;
 }
 
-// Navigation Icon
+.hexagon-5rem-border {
+    width: 5.5rem;
+    height: 5.5rem;
+    z-index: 1;
+}
+
+// Navigation Colors
+
 .hexagon-primary {
     background: $primary;
     &:hover, &:active {
         background: $secondary;
     }
 }
-.hexagon-navicon {
-    width: 5rem;
-    height: 5rem;
+
+.hexagon-secondary {
+    background: $secondary;
+    &:hover, &:active {
+        background: $primary;
+    }
 }
-.navicon {
-    z-index: 2;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: $white;
+
+.hexagon-emphasis {
+    background: $emphasis;
+}
+
+// Rotation
+
+.rotate {
+    -webkit-animation: rotation 20s infinite linear;
+}
+@-webkit-keyframes rotation {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(359deg); }
 }

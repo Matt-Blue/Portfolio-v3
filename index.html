@@ -4,17 +4,33 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body> 
+
+        <!-- Fixed Navigation Hexagon and Icon -->
+        <a href="#" class="top-left-fixed">
+
+            <!-- Outer Hexagon Z=1 -->
+            <div class="hexagon-wrapper-border">
+                <div class="hexagon-5rem-border rotate">
+                    <div class="hexagon hexagon-emphasis"></div>
+                </div>
+            </div>
+            
+            <!-- Inner Hexagon Z=2 -->
+            <div class="hexagon-wrapper">
+                <div class="hexagon-5rem rotate">
+                    <div class="hexagon hexagon-primary"></div>
+                </div>
+            </div>
+
+            <!-- Icon Z=3 -->
+            <i class="material-icons navicon">menu</i>
+
+        </a>
         
-        <!-- Slant + Hexagon Navicon -->
+        <!-- First Slant Start -->
         <div class="slant-wrapper">
             <div class="slant-up-secondary">
-                <a href="#">
-                    <div class="hexagon-wrapper hexagon-navicon rotate">
-                        <div class="hexagon hexagon-primary">
-                            <i class="material-icons navicon">menu</i>
-                        </div>
-                    </div>
-                </a>
+                
             </div>
         </div>
 
@@ -26,7 +42,7 @@
             <div class="item4">Start at column line 3, span to the end of the grid (-1).</div>
         </div>
 
-        <!-- Ending Slant -->
+        <!-- First Slant End -->
         <div class="slant-wrapper">
             <div class="slant-down-secondary">
             </div>
