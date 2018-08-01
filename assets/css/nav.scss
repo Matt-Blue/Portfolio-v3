@@ -12,6 +12,16 @@
     padding: 3rem;
 }
 
+.downicon {
+    position: absolute;
+    margin-top: 2rem;
+    left: 50%;
+    color: $emphasis;
+    &:hover, &:active {
+        color: $primary;
+    }
+}
+
 // Nav and Arrow fixing
 
 .top-left-fixed {

@@ -1,9 +1,34 @@
 // Background
 body {
-    background-color: $background;
+    background: linear-gradient(to right, $secondary, $primary);
+    font-family: 'Roboto';
     margin: 0;
     padding: 0;
     .secondary {
         background-color: $secondary;
     }
+}
+
+h1, h2, h3, h4, h5 {
+    font-size: 250%;
+}
+
+h1 {
+    margin: 2rem;
+}
+
+p {
+    font-size: 120%;
+}
+
+.background {
+    background-color: $background;
+}
+
+.background-primary {
+    background-color: $primary;
+}
+
+.background-secondary {
+    background-color: $secondary;
 }

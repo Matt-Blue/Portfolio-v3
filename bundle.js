@@ -1351,7 +1351,11 @@ var _ripple = __webpack_require__(4);
 var _index = __webpack_require__(13);
 
 var primaryButtonRipple = new _ripple.MDCRipple(document.querySelector('.button-primary'));
+// Ripple Effect on Buttons
+
 var secondaryButtonRipple = new _ripple.MDCRipple(document.querySelector('.button-secondary'));
+
+// Top App Bar
 
 var topAppBarElement = document.querySelector('.mdc-top-app-bar');
 var topAppBar = new _index.MDCTopAppBar(topAppBarElement);
