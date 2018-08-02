@@ -1,28 +1,19 @@
 
-// 12 column app grid
-
-.row {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; // 12 equal cols
-    grid-template-rows: auto; // one row with auto height
-    grid-gap: 0rem; // gap between cells
-    align-items: center; // content float center
-    align-content: start; // row float to top
-}
-
-// 8 column body
-
-.container {
-    grid-column: col-start 2 / -2;
-    grid-row: 3;
-    background-color: $background;
-}
-
 // Wrapper
 
 .wrapper {
     display: grid;
     grid-template-columns: repeat(12, [col-start] 1fr);
     grid-gap: 1rem;
+}
+
+// 8 column body
+
+.col-eight {
+    grid-column: col-start 2 / -2;
+    grid-row: 3;
+    background-color: $background;
+    display: grid;
 }
 
 // One
@@ -40,38 +31,16 @@
 
 // Thirds
 
-.one-three { grid-column: 1 / 4; }
-.two-three { grid-column: 4 / 8; }
-.three-three { grid-column: 8 / 11; }
+.one-three { grid-column: 1 / 2; }
+.two-three { grid-column: 2 / 3; }
+.three-three { grid-column: 3 / 4; }
 
-.one-two-three { grid-column: 1 / 8; }
-.two-three-three { grid-column: 4 / 11; }
+.one-two-three { grid-column: 1 / 3; }
+.two-three-three { grid-column: 2 / 4; }
 
-// test
-
-.item1 {
-    grid-column: col-start / span 3;
-    background-color: $primary;
-}
-.item2 {
-    grid-column: col-start 6 / span 4 ;
-    grid-row: 1 / 3;
-    background-color: $primary;
-}
-.item3 {
-    grid-column: col-start 2 / span 2;
-    grid-row: 2;
-    background-color: $primary;
-}
-.item4 {
-    grid-column: col-start 3 / -1;
-    grid-row: 3;
-    background-color: $primary;
-}
-
-.container {
-    display: grid;
-}
+.one-three--emphasis-center { grid-column: 1 / 4; }
+.two-three--emphasis-center { grid-column: 4 / 8; }
+.three-three--emphasis-center { grid-column: 8 / 11; }
 
 // General Within Div
 .center {
