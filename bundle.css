@@ -23,11 +23,6 @@ p {
 *:active {
   outline: none; }
 
-.fullscreen {
-  background-size: cover;
-  margin-bottom: -1rem;
-  padding-bottom: 0rem; }
-
 .background {
   background-color: #323232; }
 
@@ -49,6 +44,27 @@ p {
 .color-white {
   color: white; }
 
+.text-shade {
+  text-shadow: 0.1rem 0.1rem #323232; }
+
+.box-shade {
+  box-shadow: 0.1rem 0.1rem #323232; }
+
+.outline-primary {
+  border: 2px solid cyan; }
+
+.text-center {
+  text-align: center; }
+
+.pad-med {
+  padding: 0.5rem;
+  margin: 0.5rem; }
+
+.fullscreen {
+  background-size: cover;
+  margin-bottom: -1rem;
+  padding-bottom: 0rem; }
+
 .row {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
@@ -66,9 +82,32 @@ p {
   grid-template-columns: repeat(12, [col-start] 1fr);
   grid-gap: 1rem; }
 
-.row {
-  grid-column: 1 / -1;
-  border: 2px solid cyan; }
+.one {
+  grid-column: 1 / -1; }
+
+.one-two {
+  grid-column: 1 / 4; }
+
+.two-two {
+  grid-column: 5 / 8; }
+
+.two-middle {
+  grid-column: 4 / 5; }
+
+.one-three {
+  grid-column: 1 / 4; }
+
+.two-three {
+  grid-column: 4 / 8; }
+
+.three-three {
+  grid-column: 8 / 11; }
+
+.one-two-three {
+  grid-column: 1 / 8; }
+
+.two-three-three {
+  grid-column: 4 / 11; }
 
 .item1 {
   grid-column: col-start / span 3;
@@ -1235,7 +1274,7 @@ a.mdc-list-item {
   --mdc-ripple-fg-opacity: 0.16; }
 
 .button-secondary:not(:disabled) {
-  border-color: #123788; }
+  border-color: white; }
 
 .bubble {
   position: relative;

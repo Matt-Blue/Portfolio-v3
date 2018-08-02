@@ -33,12 +33,6 @@ p {
     }
 }
 
-.fullscreen {
-    background-size: cover;
-    margin-bottom: -1rem;
-    padding-bottom: 0rem;
-}
-
 .background {
     background-color: $background;
 }
@@ -62,4 +56,30 @@ p {
 }
 .color-white {
     color: $white;
+}
+
+.text-shade {
+    text-shadow: 0.1rem 0.1rem $background;
+}
+.box-shade {
+    box-shadow: 0.1rem 0.1rem $background;
+}
+
+.outline-primary {
+    border: 2px solid $primary;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.pad-med {
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+.fullscreen {
+    background-size: cover;
+    margin-bottom: -1rem;
+    padding-bottom: 0rem;
 }

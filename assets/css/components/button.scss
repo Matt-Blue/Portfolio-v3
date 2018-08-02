@@ -10,5 +10,5 @@
     @include mdc-button-outline-color($secondary);
     @include mdc-states($secondary);
     @include mdc-button-filled-accessible($secondary);
-    @include mdc-button-outline-color($emphasis);
+    @include mdc-button-outline-color($white);
 }

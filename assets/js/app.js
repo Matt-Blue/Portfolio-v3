@@ -10,3 +10,8 @@ const secondaryButtonRipple = new MDCRipple(document.querySelector('.button-seco
 import {MDCTopAppBar} from '@material/top-app-bar/index';
 const topAppBarElement = document.querySelector('.mdc-top-app-bar');
 const topAppBar = new MDCTopAppBar(topAppBarElement);
+
+// Drawer
+
+let drawer = new mdc.drawer.MDCPersistentDrawer(document.querySelector('.mdc-drawer--persistent'));
+document.querySelector('#menu').addEventListener('click', () => drawer.open = true);
