@@ -1,9 +1,19 @@
-@import "./colors.scss";
 
+// General
+
+@import "./color.scss";
 @import "./body.scss";
 @import "./grid.scss";
-@import "./nav.scss";
-@import "./buttons.scss";
-@import "./fade.scss";
-@import "./slant.scss";
-@import "./hexagon.scss";
+
+// Components
+
+@import "./components/nav.scss";
+@import "./components/hexagon.scss";
+@import "./components/landing.scss";
+@import "./components/button.scss";
+@import "./components/bubble.scss";
+
+// Transitions
+
+@import "./transitions/fade.scss";
+@import "./transitions/slant.scss";

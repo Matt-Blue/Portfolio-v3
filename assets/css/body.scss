@@ -1,4 +1,9 @@
-// Background
+
+* {
+    outline: none;    
+    color: $background;
+}
+
 body {
     background: linear-gradient(to right, $secondary, $primary);
     font-family: 'Roboto';
@@ -19,6 +24,19 @@ h1 {
 
 p {
     font-size: 120%;
+    margin: 1rem;
+}
+
+* {
+    &:active {
+        outline: none;
+    }
+}
+
+.fullscreen {
+    background-size: cover;
+    margin-bottom: -1rem;
+    padding-bottom: 0rem;
 }
 
 .background {
@@ -31,4 +49,17 @@ p {
 
 .background-secondary {
     background-color: $secondary;
+}
+
+.color-background {
+    color: $background;
+}
+.color-primary {
+    color: $primary;
+}
+.color-secondary {
+    color: $secondary;
+}
+.color-white {
+    color: $white;
 }

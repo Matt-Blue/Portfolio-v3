@@ -6,17 +6,44 @@
 .slant-wrapper {
     display: grid;
     grid-template-columns: repeat(12, [col-start] 1fr);
-    grid-template-rows: 10rem;
+    grid-template-rows: 5rem;
     grid-gap: 0;
     overflow: hidden;
 }
+
+// Primary
+
+.slant-primary-background {
+    grid-column: col-start / -1;
+    grid-row: 1;
+    background: linear-gradient(to right bottom, $primary 50%, $background 50%);
+}
+
+//Secondary
+
 .slant-secondary-background {
     grid-column: col-start / -1;
     grid-row: 1;
     background: linear-gradient(to right bottom, $secondary 50%, $background 50%);
 }
+
 .slant-secondary-primary {
     grid-column: col-start / -1;
     grid-row: 1;
     background: linear-gradient(to right bottom, $secondary 50%, $primary 50%);
+}
+
+// Background
+
+
+
+// Slant Types
+
+.slant-bottom {
+    position: relative;
+    bottom: 0rem;
+}
+
+.margin-top-slant {
+    margin-top: 1rem;
 }

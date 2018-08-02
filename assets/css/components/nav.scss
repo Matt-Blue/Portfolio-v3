@@ -1,0 +1,40 @@
+@import "@material/drawer/mdc-drawer";
+@import "@material/list/mdc-list";
+
+// Navigation Icon & Arrow
+
+.navicon {
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: $white;
+    padding: 3rem;
+}
+
+.downicon {
+    color: $white;
+}
+
+.downicon-wrapper {
+    position: relative;
+    bottom: 0;
+    right: 0;
+
+}
+
+// Navicon and Downicon Fixing
+
+.top-left-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.bottom-right-fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+}

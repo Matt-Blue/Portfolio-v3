@@ -1,3 +1,6 @@
+
+// Wrapper
+
 .fade-wrapper {
     display: grid;
     grid-template-columns: repeat(12, [col-start] 1fr);
@@ -5,23 +8,45 @@
     grid-gap: 0;
     overflow: hidden;
 }
+
+// Primary
+
+.fade-up-primary {
+    grid-column: col-start / -1;
+    grid-row: 1;
+    background: linear-gradient(rgba(0,0,0,0), $primary);
+}
+
+// Secondary
+
 .fade-up-secondary {
     grid-column: col-start / -1;
     grid-row: 1;
     background: linear-gradient(rgba(0,0,0,0), $secondary);
 }
+
 .fade-down-secondary {
     grid-column: col-start / -1;
     grid-row: 1;
     background: linear-gradient($secondary, rgba(0,0,0,0));
 }
+
 .fade-down-secondary-background {
     grid-column: col-start / -1;
     grid-row: 1;
     background: linear-gradient($secondary, $background);
 }
+
 .fade-down-secondary-primary {
     grid-column: col-start / -1;
     grid-row: 1;
     background: linear-gradient($secondary, $primary);
+}
+
+// Background
+
+.fade-up-background {
+    grid-column: col-start / -1;
+    grid-row: 1;
+    background: linear-gradient(rgba(0,0,0,0), $background);
 }
