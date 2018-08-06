@@ -7,12 +7,27 @@
     grid-gap: 1rem;
 }
 
-// 8 column body
+// 12 columns centered
 
-.col-eight {
+.twelve-col-center {
+    grid-column: col-start 1 / -1;
+    grid-row: 3;
+    display: grid;
+}
+
+// 8 columns centered
+
+.eight-col-center {
     grid-column: col-start 2 / -2;
     grid-row: 3;
-    background-color: $background;
+    display: grid;
+}
+
+// 6 columns centered
+
+.six-col-center {
+    grid-column: col-start 3 / -3;
+    grid-row: 3;
     display: grid;
 }
 
@@ -47,4 +62,19 @@
     position: absolute;
     top: 50%;
     left: 50%;
+}
+
+// Etc.
+
+.no-gutter {
+    padding-right:0;
+    padding-left:0;
+    margin-right:0;
+    margin-left:0;
+}
+
+.fullscreen {
+    background-size: cover;
+    margin-bottom: -1rem;
+    padding-bottom: 0rem;
 }

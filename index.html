@@ -6,20 +6,20 @@
     </head>
     <body> 
 
-<!-- Fixed Navigation Hexagon and Icon -->
+<!-- Fixed Navigation Hexagon -->
 
         <a href="#" class="top-left-fixed">
 
             <!-- Outer Hexagon Z=1 -->
             <div class="hexagon-wrapper-border">
-                <div class="hexagon-5rem-border rotate">
+                <div class="hexagon-5rem-border spin-infinite">
                     <div class="hexagon hexagon-white"></div>
                 </div>
             </div>
             
             <!-- Inner Hexagon Z=2 -->
             <div class="hexagon-wrapper">
-                <div class="hexagon-5rem rotate">
+                <div class="hexagon-5rem spin-infinite">
                     <div class="hexagon hexagon-primary"></div>
                 </div>
             </div>
@@ -29,7 +29,7 @@
 
         </a>
 
-<!-- END Fixed Navigation Hexagon and Icon -->
+<!-- END Fixed Navigation Hexagon -->
 
 <!-- Landing Page -->
 
@@ -42,7 +42,7 @@
             <div class="wrapper background-primary">
 
                 <!-- Bubble -->
-                <div class="bubble">
+                <div class="bubble wave-hover">
                     <p class="color-white" style="padding: 0rem; margin: 0rem; margin-top: 0.5rem; font-size: 1.5rem;">Hi!</p>
                 </div>
 
@@ -54,7 +54,7 @@
 
                     <!-- Down Arrow -->
                     <a href="#">
-                        <i class="material-icons downicon-wrapper color-white" style="font-size: 2rem;">arrow_downward</i>        
+                        <i class="material-icons downicon-wrapper color-white bounce-always" style="font-size: 2rem;">arrow_downward</i>        
                     </a><br>
 
                 </div>
@@ -70,60 +70,131 @@
 
 <!-- Professional -->
 
-        <!-- Row -->
+        <!-- Profile Picture -->
         <div class="wrapper background margin-top-slant">
-            <div class="col-eight">
-                <p class="one color-primary text-center outline-primary">1</p>
+            <div class="eight-col-center">
+                    <img 
+                    src="./assets/img/Headshot.jpg"
+                    class="one color-primary text-center border-primary circle-image img-large img-center"
+                >
+            </div>
+        </div>
+
+        <!-- Overview -->
+        <div class="wrapper background">
+            <div class="eight-col-center">
+                <p class="one color-primary text-center">
+                    Full-Stack Engineer with an emphasis on Back-End.
+                </p>
+            </div>
+        </div>        
+
+        <!-- Technology Section -->
+        <div class="wrapper background">
+                <div class="twelve-col-center">
+
+                    <!-- Front-End -->
+                    <p class="one text-center no-gutter">
+                        <!-- Structure -->
+                        <button class="button button-front margin-small mdc-button mdc-button--outlined">HTML</button>
+                        <button class="button button-front margin-small mdc-button mdc-button--outlined">CSS</button>
+                        <button class="button button-front margin-small mdc-button mdc-button--outlined">JS</button>
+                        <button class="button button-front margin-small mdc-button mdc-button--outlined">Bootstrap</button>
+                        <button class="button button-front margin-small mdc-button mdc-button--outlined">SASS</button>
+                        <!-- JavaScript Front-End -->
+                        <button class="button button-js-front margin-small mdc-button mdc-button--outlined">jQuery</button>
+                        <button class="button button-js-front margin-small mdc-button mdc-button--outlined">React</button>
+                        <!-- Intermediate Tech -->
+                        <button class="button button-js-front margin-small mdc-button mdc-button--outlined">Postman</button>
+                        <button class="button button-js-front margin-small mdc-button mdc-button--outlined">GraphQL</button>
+                        <button class="button button-js-front margin-small mdc-button mdc-button--outlined">Apollo</button>
+                    </p>
+
+                    <!-- Back-End -->
+                    <p class="one text-center no-gutter">
+                        <!-- JavaScript Back-End -->
+                        <button class="button button-js-back margin-small mdc-button mdc-button--outlined">NPM</button>
+                        <button class="button button-js-back margin-small mdc-button mdc-button--outlined">Node</button>
+                        <button class="button button-js-back margin-small mdc-button mdc-button--outlined">Express</button>
+                        <!-- PHP -->
+                        <button class="button button-php margin-small mdc-button mdc-button--outlined">PHP</button>
+                        <button class="button button-php margin-small mdc-button mdc-button--outlined">Laravel</button>
+                        <button class="button button-php margin-small mdc-button mdc-button--outlined">Zend</button>
+                        <!-- Other -->
+                        <button class="button button-other margin-small mdc-button mdc-button--outlined">Java</button>
+                        <button class="button button-other margin-small mdc-button mdc-button--outlined">Spring</button>
+                        <button class="button button-other margin-small mdc-button mdc-button--outlined">C++</button>
+                        
+                    </p>
+
+                    <!-- Databases -->
+                    <p class="one text-center no-gutter">
+                        <button class="button button-db margin-small mdc-button mdc-button--outlined">DB2</button>
+                        <button class="button button-db margin-small mdc-button mdc-button--outlined">MySQL</button>
+                        <button class="button button-db margin-small mdc-button mdc-button--outlined">MongoDB</button>
+                        <button class="button button-db margin-small mdc-button mdc-button--outlined">MariaDB</button>
+                    
+                    </p>
+                </div>
+            </div>
+
+<!-- Grid Examples -->
+
+        <!-- Row -->
+        <div class="wrapper background">
+            <div class="eight-col-center">
+                <p class="one color-primary text-center border-primary">1</p>
             </div>
         </div>
 
         <!-- Halves -->
         <div class="wrapper background">
-            <div class="col-eight">                
-                <p class="one-two color-primary text-center outline-primary">1/2</p>
-                <p class="two-two color-primary text-center outline-primary">2/2</p>
+            <div class="eight-col-center">                
+                <p class="one-two color-primary text-center border-primary">1/2</p>
+                <p class="two-two color-primary text-center border-primary">2/2</p>
             </div>            
         </div>
 
         <!-- Thirds -->
         <div class="wrapper background">
-            <div class="col-eight">
-                <p class="one-three color-primary text-center outline-primary">1/3</p>
-                <p class="two-three color-primary text-center outline-primary">2/3</p>
-                <p class="three-three color-primary text-center outline-primary">3/3</p>
+            <div class="eight-col-center">
+                <p class="one-three color-primary text-center border-primary">1/3</p>
+                <p class="two-three color-primary text-center border-primary">2/3</p>
+                <p class="three-three color-primary text-center border-primary">3/3</p>
             </div>
         </div>
 
         <!-- Thirds w/ Emphasis on Center -->
         <div class="wrapper background">
-            <div class="col-eight">
-                <p class="one-three--emphasis-center color-primary text-center outline-primary">1/3</p>
-                <p class="two-three--emphasis-center color-primary text-center outline-primary">2/3 *Emphasis</p>
-                <p class="three-three--emphasis-center color-primary text-center outline-primary">3/3</p>
+            <div class="eight-col-center">
+                <p class="one-three--emphasis-center color-primary text-center border-primary">1/3</p>
+                <p class="two-three--emphasis-center color-primary text-center border-primary">2/3 *Emphasis</p>
+                <p class="three-three--emphasis-center color-primary text-center border-primary">3/3</p>
             </div>
         </div>
 
         <!-- One Third & Two Thirds -->
         <div class="wrapper background">
-            <div class="col-eight">
-                <p class="one-three color-primary text-center outline-primary">1/3</p>
-                <p class="two-three-three color-primary text-center outline-primary">2/3, 3/3</p>
+            <div class="eight-col-center">
+                <p class="one-three color-primary text-center border-primary">1/3</p>
+                <p class="two-three-three color-primary text-center border-primary">2/3, 3/3</p>
             </div>
         </div>
 
         <!-- Two Thirds & One Third -->
         <div class="wrapper background">
-            <div class="col-eight">
-                <p class="one-two-three color-primary text-center outline-primary">1/3, 2/3</p>
-                <p class="three-three color-primary text-center outline-primary">3/3</p>
+            <div class="eight-col-center">
+                <p class="one-two-three color-primary text-center border-primary">1/3, 2/3</p>
+                <p class="three-three color-primary text-center border-primary">3/3</p>
             </div>
         </div>
 
+        <!-- Equal Thirds in six col center -->
         <div class="wrapper background">            
-            <div class="col-eight">
-                <div class="one-three--small color-primary text-center pad-med outline-primary">HEX</div>
-                <div class="two-three--small color-primary text-center pad-med outline-primary">HEX</div>
-                <div class="three-three--small color-primary text-center pad-med outline-primary">HEX</div>
+            <div class="six-col-center">
+                <div class="one-three color-primary text-center pad-med border-primary">HEX</div>
+                <div class="two-three color-primary text-center pad-med border-primary">HEX</div>
+                <div class="three-three color-primary text-center pad-med border-primary">HEX</div>
             </div>
         </div>
         

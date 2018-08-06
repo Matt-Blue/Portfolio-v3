@@ -1335,9 +1335,9 @@ module.exports = __webpack_require__(10);
 
 /***/ }),
 /* 9 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: \r\n@import \"./animations.scss\";\r\n^\r\n      File to import not found or unreadable: ./animations.scss.\r\n      in C:\\Users\\Blue\\Code\\Portfolio\\assets\\css\\app.scss (line 7, column 1)");
+module.exports = __webpack_require__.p + "bundle.css";
 
 /***/ }),
 /* 10 */

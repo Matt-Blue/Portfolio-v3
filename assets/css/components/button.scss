@@ -1,4 +1,7 @@
 @import "@material/button/mdc-button";
+
+// General Section
+
 .button-primary {
     @include mdc-button-ink-color($primary);
     @include mdc-button-outline-color($primary);
@@ -11,4 +14,46 @@
     @include mdc-states($secondary);
     @include mdc-button-filled-accessible($secondary);
     @include mdc-button-outline-color($white);
+}
+
+// Front-End Section
+
+.button-front {
+    @include mdc-button-ink-color($front);
+    @include mdc-button-outline-color($front);
+    @include mdc-states($front);
+}
+
+.button-js-front {
+    @include mdc-button-ink-color($js-front);
+    @include mdc-button-outline-color($js-front);
+    @include mdc-states($js-front);
+}
+
+// Back-End Section
+
+.button-js-back {
+    @include mdc-button-ink-color($js-back);
+    @include mdc-button-outline-color($js-back);
+    @include mdc-states($js-back);
+}
+
+.button-php {
+    @include mdc-button-ink-color($php);
+    @include mdc-button-outline-color($php);
+    @include mdc-states($php);
+}
+
+.button-other {
+    @include mdc-button-ink-color($other);
+    @include mdc-button-outline-color($other);
+    @include mdc-states($other);
+}
+
+// DB Section
+
+.button-db {
+    @include mdc-button-ink-color($db);
+    @include mdc-button-outline-color($db);
+    @include mdc-states($db);
 }

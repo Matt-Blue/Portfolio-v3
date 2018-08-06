@@ -1,0 +1,77 @@
+
+* {
+    outline: none;    
+    color: $background;
+}
+
+body {
+    background: linear-gradient(to right, $secondary, $primary);
+    font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
+    .secondary {
+        background-color: $secondary;
+    }
+}
+
+h1, h2, h3, h4, h5 {
+    font-size: 250%;
+}
+
+h1 {
+    margin: 2rem;
+}
+
+p {
+    font-size: 120%;
+    margin: 1rem;
+}
+
+* {
+    &:active {
+        outline: none;
+    }
+}
+
+// Backgrounds
+
+.background { background-color: $background; }
+.background-primary { background-color: $primary; }
+.background-secondary { background-color: $secondary; }
+
+// Template colors
+
+.color-background { color: $background; }
+.color-primary { color: $primary; }
+.color-secondary { color: $secondary; }
+.color-white { color: $white; }
+
+// Language Specific Colors
+
+.color-front { color: $front; }
+.color-js-front { color: $js-front; }
+.color-js-back { color: $js-back; }
+.color-php { color: $php; }
+.color-other { color: $other; }
+.color-db { color: $db; }
+
+// Shades
+
+.text-shade {
+    text-shadow: 0.1rem 0.1rem $background;
+}
+.box-shade {
+    box-shadow: 0.1rem 0.1rem $background;
+}
+
+//Border 
+
+.border-primary { border: 2px solid $primary; }
+
+// Etc.
+
+.text-center { text-align: center; }
+
+.underline {
+    text-decoration: underline;
+}

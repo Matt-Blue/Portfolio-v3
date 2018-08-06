@@ -1,23 +1,25 @@
 
 // General
 
-@import "./color.scss";
-@import "./body.scss";
-@import "./grid.scss";
-@import "./animations.scss";
+@import "./general/color.scss";
+@import "./general/body.scss";
+@import "./general/grid.scss";
+@import "./general/padding.scss";
 
 // Animations
 
 @import "./animations/bounce.scss";
-@import "./animations/rotate.scss";
+@import "./animations/spin.scss";
+@import "./animations/wave.scss";
 
 // Components
 
 @import "./components/nav.scss";
 @import "./components/hexagon.scss";
-@import "./components/landing.scss";
+@import "./components/image.scss";
 @import "./components/button.scss";
 @import "./components/bubble.scss";
+@import "./components/landing.scss";
 
 // Transitions
 

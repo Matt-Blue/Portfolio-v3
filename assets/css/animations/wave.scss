@@ -1,5 +1,18 @@
+
+
+// Wave on Hover and Active
+
+.wave-hover {
+    // animation
+    &:hover, &:active {
+        animation: wave 2s;
+        animation-iteration-count: 5s;
+    }
+}
+
+// Wave Twice
+
 @keyframes wave {
-    // Wave Twice
     10% { transform: translate(0rem, 0rem) rotate(15deg); }
     20% { transform: translate(0rem, 0rem) rotate(0deg); }
     30% { transform: translate(0rem, 0rem) rotate(15deg); }

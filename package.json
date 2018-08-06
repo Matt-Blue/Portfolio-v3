@@ -39,6 +39,7 @@
     "webpack-dev-server": "^2.11.2"
   },
   "dependencies": {
+    "@material/chips": "^0.38.0",
     "@material/drawer": "^0.37.1",
     "@material/layout-grid": "^0.34.0",
     "@material/list": "^0.37.1",
