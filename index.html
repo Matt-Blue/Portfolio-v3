@@ -8,63 +8,77 @@
 
 <!-- Fixed Navigation Hexagon -->
 
-        <a href="#" class="top-left-fixed">
+    <a href="#" class="top-left-fixed" onclick="openNav()">
 
-            <!-- Outer Hexagon Z=1 -->
-            <div class="hexagon-wrapper-border">
-                <div class="hexagon-5rem-border spin-infinite">
-                    <div class="hexagon hexagon-white"></div>
-                </div>
+        <!-- Outer Hexagon Z=1 -->
+        <div class="hexagon-wrapper-border">
+            <div class="hexagon-5rem-border spin-infinite">
+                <div class="hexagon hexagon-white"></div>
             </div>
-            
-            <!-- Inner Hexagon Z=2 -->
-            <div class="hexagon-wrapper">
-                <div class="hexagon-5rem spin-infinite">
-                    <div class="hexagon hexagon-primary"></div>
-                </div>
+        </div>
+        
+        <!-- Inner Hexagon Z=2 -->
+        <div class="hexagon-wrapper">
+            <div class="hexagon-5rem spin-infinite">
+                <div class="hexagon hexagon-primary"></div>
             </div>
+        </div>
 
-            <!-- Icon Z=3 -->
-            <i class="material-icons navicon">menu</i>
+        <!-- Icon Z=3 -->
+        <i class="material-icons navicon">menu</i>
 
-        </a>
+    </a>
 
 <!-- END Fixed Navigation Hexagon -->
 
+<!-- Navigation Drawer -->
+
+<div id="navDrawer" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#professional">Professional</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#service">Service</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<!-- END Navigation Drawer -->
+
+<div class="main">
+
 <!-- Landing Page -->
 
-        <div class="fullscreen" class="background-primary">
+    <div class="fullscreen" class="background-primary">
 
-            <!-- First Fade -->
-            <div class="fade-wrapper"><div class="fade-up-primary"></div></div>
+        <!-- First Fade -->
+        <div class="fade-wrapper"><div class="fade-up-primary"></div></div>
+
+        <!-- Headline -->
+        <div class="wrapper background-primary">
+
+            <!-- Bubble -->
+            <div class="bubble wave-hover">
+                <p class="color-white" style="padding: 0rem; margin: 0rem; margin-top: 0.5rem; font-size: 1.5rem;">Hi!</p>
+            </div>
 
             <!-- Headline -->
-            <div class="wrapper background-primary">
+            <div class="headline">     
+                
+                <!-- Info -->
+                <h1 class="color-white text-shade">I'm Matthew Bluestein</h1>
 
-                <!-- Bubble -->
-                <div class="bubble wave-hover">
-                    <p class="color-white" style="padding: 0rem; margin: 0rem; margin-top: 0.5rem; font-size: 1.5rem;">Hi!</p>
-                </div>
-
-                <!-- Headline -->
-                <div class="headline">     
-                    
-                    <!-- Info -->
-                    <h1 class="color-white text-shade">I'm Matthew Bluestein</h1>
-
-                    <!-- Down Arrow -->
-                    <a href="#">
-                        <i class="material-icons downicon-wrapper color-white bounce-always" style="font-size: 2rem;">arrow_downward</i>        
-                    </a><br>
-
-                </div>
+                <!-- Down Arrow -->
+                <a href="#">
+                    <i class="material-icons downicon-wrapper color-white bounce-always" style="font-size: 2rem;">arrow_downward</i>        
+                </a><br>
 
             </div>
 
-            <!-- Slant Down Left to Top Right Secondary on Top Primary on Bottom -->
-            <div class="slant-wrapper"><div class="slant-primary-background slant-bottom"></div></div>
-            
         </div>
+
+        <!-- Slant Down Left to Top Right Secondary on Top Primary on Bottom -->
+        <div class="slant-wrapper"><div class="slant-primary-background slant-bottom"></div></div>
+        
+    </div>
 
 <!-- END Langing Page -->
 
@@ -95,7 +109,7 @@
 
                     <!-- Front-End -->
                     <p class="one text-center no-gutter">
-                        <!-- Structure -->
+                        <!-- Structure & Style -->
                         <button class="button button-front margin-small mdc-button mdc-button--outlined">HTML</button>
                         <button class="button button-front margin-small mdc-button mdc-button--outlined">CSS</button>
                         <button class="button button-front margin-small mdc-button mdc-button--outlined">JS</button>
@@ -105,9 +119,9 @@
                         <button class="button button-js-front margin-small mdc-button mdc-button--outlined">jQuery</button>
                         <button class="button button-js-front margin-small mdc-button mdc-button--outlined">React</button>
                         <!-- Intermediate Tech -->
-                        <button class="button button-js-front margin-small mdc-button mdc-button--outlined">Postman</button>
                         <button class="button button-js-front margin-small mdc-button mdc-button--outlined">GraphQL</button>
                         <button class="button button-js-front margin-small mdc-button mdc-button--outlined">Apollo</button>
+                        <button class="button button-js-front margin-small mdc-button mdc-button--outlined">Postman</button>
                     </p>
 
                     <!-- Back-End -->
@@ -137,6 +151,8 @@
                     </p>
                 </div>
             </div>
+
+<!-- End Professional -->
 
 <!-- Grid Examples -->
 
@@ -197,6 +213,10 @@
                 <div class="three-three color-primary text-center pad-med border-primary">HEX</div>
             </div>
         </div>
+
+<!-- END Grid Examples -->
+
+<!-- Button Examples -->
         
         <!-- <button class="button button-primary mdc-button mdc-button--outlined">
             Primary Button
@@ -204,10 +224,24 @@
         <button class="button button-secondary mdc-button mdc-button--outlined">
             Secondary Button
         </button> -->
-        
+
+<!-- End Button Examples -->
+</div>
     </body>
 </html>
 
 <!-- Scripts -->
 <script src="bundle.js" async></script>
 <script src="//cdn.jsdelivr.net/prefixfree/1.0.7/prefixfree.min.js"></script><!-- Prefixfree.js: no prefixes to transform in css (browser compatability) -->
+
+<!-- Nav Drawer -->
+<script>
+    function openNav() {
+        document.getElementById("navDrawer").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+    function closeNav() {
+        document.getElementById("navDrawer").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    } 
+</script>

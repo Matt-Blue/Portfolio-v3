@@ -1360,13 +1360,6 @@ var secondaryButtonRipple = new _ripple.MDCRipple(document.querySelector('.butto
 var topAppBarElement = document.querySelector('.mdc-top-app-bar');
 var topAppBar = new _index.MDCTopAppBar(topAppBarElement);
 
-// Drawer
-
-var drawer = new mdc.drawer.MDCPersistentDrawer(document.querySelector('.mdc-drawer--persistent'));
-document.querySelector('#menu').addEventListener('click', function () {
-  return drawer.open = true;
-});
-
 /***/ }),
 /* 11 */
 /***/ (function(module, exports, __webpack_require__) {
